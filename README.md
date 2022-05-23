@@ -1,2 +1,7 @@
-# SiteOfArticles
- My spring boot application on the theme of the site of articles
+# Как запустить приложение 
+1) Загрузите и откройте проект в IntelijIdea
+2) Подготовка базы данных:
+Скачайте MySQL версии 5.6 или выше https://dev.mysql.com/downloads/
+Зайдите в MySQL WorkBench и создайте соединение (с любым названием) 
+Создайте схему с названием articles_db. База данных готова.
+3) Можно запускать проект. Он запустится на адресе http://localhost:8080/siteOfArticles. Изначально он будет пустой, так как в базе данных изначально ничего не будет.
