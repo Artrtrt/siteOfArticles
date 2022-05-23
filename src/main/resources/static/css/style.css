@@ -1,0 +1,43 @@
+body {
+    background-color: #b6fff7;
+}
+
+footer, header {
+    background-color: aquamarine;
+    margin: 50px;
+    padding: 20px;
+}
+footer {
+    margin-bottom: 0;
+}
+header {
+    margin-top: 0;
+}
+.download {
+    padding: 30px;
+}
+
+.articles {
+    padding: 30px;
+    min-height: 200px;
+}
+.article{
+    padding: 7px;
+    font-size: large;
+}
+.links, h1 {
+    text-align: center;
+}
+
+.article p {
+    font-size: large;
+}
+
+.edit_delete form {
+    display: inline-block;
+}
+.articleBody {
+    width: 150px;
+    height: 80px;
+
+}

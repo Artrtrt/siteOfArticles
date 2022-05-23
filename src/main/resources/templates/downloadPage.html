@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DownloadPage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <h1>Article download page</h1>
+</header>
+<div class="download">
+    <p>Enter your article. The first word(before the space) will be the title of your article.</p>
+    <form th:method="POST" th:action="@{/siteOfArticles}" th:object="${article}">
+        <label for="title">Enter title: </label>
+        <input class="title" type="text" th:field="*{title}" id="title">
+        <div style="color:red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</div>
+        <br><br>
+        <label for="articleBody">Enter article: </label>
+        <textarea class="articleBody" type="text" th:field="*{articleBody}" id="articleBody"></textarea>
+        <div style="color:red" th:if="${#fields.hasErrors('articleBody')}" th:errors="*{articleBody}">ArticleBody Error</div>
+        <br>
+        <input type="submit" value="create">
+    </form>
+</div>
+<footer>
+    <div class="links">
+        <p>Go to the home page</p>
+        <a href="/siteOfArticles">HomePage</a>
+    </div>
+</footer>
+</body>
+</html>

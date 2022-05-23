@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="articles">
+    <h2>List of Articles:</h2>
+    <ul>
+        <li class ="article" th:each="article : ${articles}">
+        <a th:href="@{/siteOfArticles/{id}(id=${article.getArticle_id()})}" th:text="${article.getTitle()}">Article</a></li>
+    </ul>
+</div>
+<footer id="footer">
+    <div class="links">
+        <p class>Upload articles here</p>
+        <a href="/siteOfArticles/downloadPage">DownloadPage</a>
+    </div>
+</footer>
+</body>
+</html>
